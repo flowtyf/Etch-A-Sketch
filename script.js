@@ -10,6 +10,15 @@ const renderGrid = (squares) => {
   }
 };
 
+const drawPixel = () => {
+  const getSquares = document.getElementsByClassName('grid-square');
+  const squareArr = Array.from(getSquares);
+  squareArr.forEach((el) => {
+    el.addEventListener('mouseover', () => {
+      el.classList.add('black-bg');
+    });
+  });
+};
+
 renderGrid(16);
-
-
+drawPixel();
