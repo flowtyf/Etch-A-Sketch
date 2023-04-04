@@ -1,0 +1,22 @@
+.white-pixel {
+  background-color: white;
+}
+
+.black-pixel {
+  background-color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+}
+
+.grid-square {
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+}
