@@ -20,5 +20,10 @@ const drawPixel = () => {
   });
 };
 
+const gridSizeButton = document.createElement('button');
+gridSizeButton.className = 'size-button';
+gridSizeButton.innerHTML = '64x64';
+document.body.appendChild(gridSizeButton);
+
 renderGrid(16);
 drawPixel();
