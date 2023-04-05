@@ -10,18 +10,17 @@ const renderGrid = (squares) => {
     gridSquare.className = `grid-square`;
     gridContainer.appendChild(gridSquare);
   }
+  //mouseover - change grid square to black
+  const getSquares = document.getElementsByClassName('grid-square');
+  const squareArr = Array.from(getSquares);
+  squareArr.forEach((el) => {
+    el.addEventListener('mouseover', () => {
+      el.classList.add('black-bg');
+    });
+  });
 };
 
 //Add an event listener that listens for mouseover, change color of grid square to black
-function drawPixel() {
-    const getSquares = document.getElementsByClassName('grid-square');
-    const squareArr = Array.from(getSquares);
-    squareArr.forEach((el) => {
-        el.addEventListener('mouseover', () => {
-            el.classList.add('black-bg');
-        });
-    });
-}
 
 // init button for resizing
 const gridSizeButton = document.createElement('button');
@@ -29,5 +28,7 @@ gridSizeButton.className = 'size-button';
 gridSizeButton.innerHTML = '64x64';
 document.body.appendChild(gridSizeButton);
 
+// Append event listener to button that changes the grid size
+
+// Render container
 renderGrid(16);
-drawPixel();
