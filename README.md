@@ -1,2 +1,2 @@
 # Etch-A-Sketch
-Etch-a-sketch DOM manipulation project
+An etch-a-sketch type project built in javascript.
